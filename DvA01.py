@@ -26,15 +26,15 @@ gender = st.selectbox("Select your gender:", ["Select...", "Female", "Male"])
 if gender != "Select...":
     st.markdown("### Enter your health information:")
     if gender == "Female":
-        pregnancies = st.number_input("Number of Pregnancies", min_value=0, max_value=20, value=1)
+        pregnancies = st.number_input("Number of Pregnancies", min_value=0, max_value=20, value=0)
     else:
         pregnancies = 0
 
-    glucose = st.number_input("Glucose Level (mg/dL)", min_value=0, max_value=300, value=120)
-    blood_pressure = st.number_input("Diastolic Blood Pressure (mmHg)", min_value=0, max_value=200, value=70)
-    weight = st.number_input("Weight (kg)", min_value=20.0, max_value=200.0, value=70.0)
-    height_cm = st.number_input("Height (cm)", min_value=100.0, max_value=250.0, value=170.0)
-    age = st.number_input("Age (years)", min_value=1, max_value=120, value=30)
+    glucose = st.number_input("Glucose Level (mg/dL)", min_value=0, max_value=300, value=0)
+    blood_pressure = st.number_input("Diastolic Blood Pressure (mmHg)", min_value=0, max_value=200, value=0)
+    weight = st.number_input("Weight (kg)", min_value=20.0, max_value=300.0, value=0.0)
+    height_cm = st.number_input("Height (cm)", min_value=100.0, max_value=250.0, value=00.0)
+    age = st.number_input("Age (years)", min_value=1, max_value=120, value=0)
 
     height_m = height_cm / 100
     bmi = weight / (height_m ** 2)
