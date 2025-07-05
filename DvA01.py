@@ -47,7 +47,6 @@ if gender != "Select...":
         prediction = model.predict(input_scaled)[0]
 
         st.subheader("Result")
-        st.write(f"**Gender:** {gender}")
         st.write(f"**Predicted Probability of Diabetes:** {probability:.2f}")
         st.write(f"**Diagnosis:** {'You likely have diabetes' if prediction == 1 else 'Unlikely to have diabetes'}")
 
