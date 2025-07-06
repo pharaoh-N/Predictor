@@ -6,6 +6,9 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
 
 @st.cache_data
+st.title("Disclaimer")
+st.write("We do not store any of your data. All of your data is erased after the page is refreshed or deleted.")
+
 def load_model():
     url = "https://raw.githubusercontent.com/jbrownlee/Datasets/master/pima-indians-diabetes.data.csv"
     columns = ["Pregnancies", "Glucose", "BloodPressure", "SkinThickness", 
