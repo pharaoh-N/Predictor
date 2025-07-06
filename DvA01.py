@@ -33,7 +33,8 @@ if gender != "Select...":
     else:
         pregnancies = 0
 
-    glucose = st.number_input("Glucose Level (mg/dL)", min_value=0, max_value=300, value=0)
+    glucose_mmol = st.number_input("Glucose Level (mmol/L)", min_value=0.0, max_value=20.0, value=0.0)
+    glucose = glucose_mmol * 18  # convert to mg/dL
     blood_pressure = st.number_input("Diastolic Blood Pressure (mmHg)", min_value=0, max_value=200, value=0)
     weight = st.number_input("Weight (kg)", min_value=20.0, max_value=300.0, value=20.0)
     height_cm = st.number_input("Height (cm)", min_value=100.0, max_value=250.0, value=100.0)
